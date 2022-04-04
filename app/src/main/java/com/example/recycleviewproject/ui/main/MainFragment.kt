@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.recycleviewproject.R
+import com.example.recycleviewproject.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: MainFragmentBinding? = null
 
     private val binding get() = _binding!!
 
@@ -26,13 +27,12 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = MainFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        findNavController().navigate(R.id.action_secondFragment_to_mainFragment)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
     }
