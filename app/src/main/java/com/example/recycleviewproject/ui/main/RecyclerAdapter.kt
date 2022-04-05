@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleviewproject.R
 import com.google.android.material.snackbar.Snackbar
+import kotlin.random.Random
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
@@ -63,4 +64,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             }
         }
     }
+
+
 }
